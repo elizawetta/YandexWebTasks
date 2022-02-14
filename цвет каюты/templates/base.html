@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css">
+    <meta charset="UTF-8">
+    <title>Цвет каюты</title>
+</head>
+<body>
+<div class="alert-secondary"><h1 align="center">Миссия Колонизация Марса</h1></div>
+<div class="alert-light"><h4 align="center">И на Марсе будут яблони цвести!</h4></div>
+<h2 align="center">Оформление каюты</h2>
+
+<table width="800px" style="margin: auto">
+    <tr>
+        <th style="background-color: lightgrey; width: 50%">Цвет каюты</th>
+        <th style="background-color: lightgrey; width: 50%">Эмблема</th>
+    </tr>
+    <tr style="width: 100px">
+        {% if sex == "female" and age >= 21 %}
+        <td style="background-color: #FF0000; width: 50%"></td>
+        {% elif sex == "female" and age < 21 %}
+        <td style="background-color: #F3A1A1; width: 50%"></td>
+        {% elif sex == "male" and age >= 21 %}
+        <td style="background-color: #0011FF; width: 50%"></td>
+        {% elif sex == "male" and age < 21 %}
+        <td style="background-color: #6756FE; width: 50%"></td>
+        {% endif %}
+        {% if age >= 21 %}
+        <td><img src="https://domraskraski.ru/upload/000/u1/70/5b/0aea79d8.jpg" style="width: 400px;"></td>
+        {% else %}
+        <td><img src="https://raskrasil.com/wp-content/uploads/Raskrasil.com-Alien-6-606x900.jpg" style="width: 400px;">
+        </td>
+        {% endif %}
+    </tr>
+</table>
+</body>
+</html>
