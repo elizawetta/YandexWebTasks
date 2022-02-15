@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+<table>
+    <tr>
+        <td><img src="https://yastatic.net/s3/lyceum/content/images/second-year/web/MARS-2-7.png"></td>
+        <td><h1>Аварийный доступ</h1></td>
+    </tr>
+</table>
+<form method="post">
+    <p><h5>Id астронавта</h5></p>
+    <input class="form-control" name="id_">
+
+    <p><h5>Пароль астронавта</h5></p>
+    <input class="form-control" name="pasw">
+
+    <p><h5>Id капитана</h5></p>
+    <input class="form-control" name="cap_id">
+
+    <p><h5>Пароль капитана</h5></p>
+    <input class="form-control" name="cap_pswd">
+    <p></p>
+    <button type="submit" class="btn btn-primary">Доступ</button>
+</form>
+{% endblock %}
