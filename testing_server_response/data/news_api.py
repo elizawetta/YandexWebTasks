@@ -5,14 +5,14 @@ from data.users import Jobs
 blueprint = Blueprint('blueprint', __name__, template_folder='templates')
 
 
-@blueprint.route('/api/news')
+@blueprint.route('/api/jobs')
 def get_news():
     db_sess = db_session.create_session()
     jobs = db_sess.query(Jobs).all()
     return jsonify([item.to_dict() for item in jobs])
 
 
-@blueprint.route('/api/news/<int:job_id>')
+@blueprint.route('/api/jobs/<int:job_id>')
 def get_one_news(job_id):
     db_sess = db_session.create_session()
     jobs = db_sess.query(Jobs).filter(Jobs.id == job_id).all()
